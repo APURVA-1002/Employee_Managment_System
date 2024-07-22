@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="LoginMaster.master.cs" Inherits="EmployeeManagment.LoginMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-form .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-form .btn:hover {
+            background-color: #0056b3;
+        }
+        .login-form .signup-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .login-form .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-form .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+     <div class="login-form">
+        <h2>Login</h2>
+        <form runat="server">
+            <div>
+                <label for="txtUserId">User ID</label>
+                <asp:TextBox ID="txtusername" runat="server" CssClass="form-control" placeholder="Enter your User ID"></asp:TextBox>
+            </div>
+            <div>
+                <label for="txtPassword">Password</label>
+                <asp:TextBox ID="txtpassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Enter your Password"></asp:TextBox>
+            </div>
+            <asp:LinkButton ID="lbtnsignin" runat="server" CssClass="btn" OnClick="lbtnsignin_Click">Sign in</asp:LinkButton>
+            <div class="signup-link">
+                <asp:LinkButton ID="lbtnsignup" runat="server" OnClick="lbtnsignup_Click">Sign up</asp:LinkButton>
+            </div>
+        </form>
+    </div>
+</asp:Content>

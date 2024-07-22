@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.Master.cs" Inherits="EmployeeManagment.Login" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Employee Management System</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #menu {
+            background-color: #999;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+        }
+        #menu a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        #footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Welcome to Employee Management System</h1>
+        <br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink><br />
+    </div>
+    <div id="menu">
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+    </div>
+    <div id="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <p>
+                <br />
+            </p>
+            <p>
+                Please login to continue.
+            </p>
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+        All copyrights reserved @ITP
+    </div>
+</body>
+</html>
